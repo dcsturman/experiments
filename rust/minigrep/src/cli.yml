@@ -1,0 +1,18 @@
+name: minigrep
+version: "0.1.0"
+author: Dan S. <dan@sturman.org>
+about: A mini version of the classic grep for finding particular search strings within a file.
+args:
+  - QUERY:
+      help: String to look for in the file.
+      required: true
+      index: 1
+  - FILENAME:
+      help: File in which to search for the query string.
+      required: true
+      index: 2
+  - case_insensitive:
+      short: s
+      long: case_insensitive
+      takes_value: true
+      help: If true, the search is case sensitive.  If not set, then use the environment variable CASE_INSENSITIVE.
